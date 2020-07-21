@@ -1,0 +1,12 @@
+version: '3.3'
+
+services: 
+  web: 
+    container_name: api
+    image: node:14.5.0
+    build: .
+    command: npm run dev
+    ports: 
+      - "3000:3000"
+    volumes: 
+      - .:/usr/app
